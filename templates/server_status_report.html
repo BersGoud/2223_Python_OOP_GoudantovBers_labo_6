@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Server Status Report</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			margin: 20px 0;
+			min-width: 50%;
+			overflow-x: auto;
+			display: block;
+		}
+		thead {
+			background: #c3dde0;
+			color: #000;
+		}
+		th, td {
+			padding: 10px 20px;
+			text-align: left;
+		}
+		tr:nth-child(even) {
+			background: #d5e0e3;
+		}
+	</style>
+	<script>{{ script }}</script>
+</head>
+<body>
+	<h1>Server Status Report</h1>
+	<table>
+		<thead>
+		  <tr>
+			<th>Servernaam</th>
+			<th>IP-adres</th>
+			<th>Status</th>
+			<th>Laatste check</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  {% for server in servers %}
+		  <tr>
+			<td>{{ server.name }}</td>
+			<td>{{ server.ip }}</td>
+			<td{% if server.status == 'OK' %} style="background-color: green; color: white;"{% elif server.status == 'FAIL' %} style="background-color: red; color: white;"{% endif %}>{{ server.status }}</td>
+			<td>{{ server.last_check }}</td>
+		  </tr>
+		  {% endfor %}
+		</tbody>
+	</table>
+	
+	<h2>Log Data</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Servernaam</th>
+				<th>IP-adres</th>
+				<th>Status</th>
+				<th>Tijdstempel</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for line in log_lines %}
+			<tr>
+				<td>{{ line.server }}</td>
+				<td>{{ line.ip }}</td>
+				<td{% if line.status == 'OK' %} style="background-color: green; color: white;"{% elif line.status == 'FAIL' %} style="background-color: red; color: white;"{% endif %}>{{ line.status }}</td>
+				<td>{{ line.timestamp }}</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	<button style="background-color: red; color: white;" onclick="Close()">Close</button>
+</body>
+</html>
+

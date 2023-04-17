@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Server Status Report</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			margin: 20px 0;
+			min-width: 50%;
+			overflow-x: auto;
+			display: block;
+		}
+		thead {
+			background: #c3dde0;
+			color: #000;
+		}
+		th, td {
+			padding: 10px 20px;
+			text-align: left;
+		}
+		tr:nth-child(even) {
+			background: #d5e0e3;
+		}
+	</style>
+	<script>
+        function Close() { setTimeout(function() { window.close(); }, 1000); } </script>
+</head>
+<body>
+	<h1>Server Status Report</h1>
+	<table>
+		<thead>
+		  <tr>
+			<th>Servernaam</th>
+			<th>IP-adres</th>
+			<th>Status</th>
+			<th>Laatste check</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  
+		  <tr>
+			<td>Facebook</td>
+			<td>179.60.195.7</td>
+			<td style="background-color: green; color: white;">OK</td>
+			<td>2023-04-17 16:01:28</td>
+		  </tr>
+		  
+		  <tr>
+			<td>Amazon Belgium</td>
+			<td>104.68.81.55</td>
+			<td style="background-color: green; color: white;">OK</td>
+			<td>2023-04-17 16:01:28</td>
+		  </tr>
+		  
+		</tbody>
+	</table>
+	
+	<h2>Log Data</h2>
+	<table>
+		<thead>
+			<tr>
+				<th>Servernaam</th>
+				<th>IP-adres</th>
+				<th>Status</th>
+				<th>Tijdstempel</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+			<tr>
+				<td>Facebook</td>
+				<td>179.60.195.7</td>
+				<td style="background-color: green; color: white;">OK</td>
+				<td>2023-04-17 16:01:25</td>
+			</tr>
+			
+			<tr>
+				<td>Amazon Belgium</td>
+				<td>104.68.81.55</td>
+				<td style="background-color: green; color: white;">OK</td>
+				<td>2023-04-17 16:01:25</td>
+			</tr>
+			
+			<tr>
+				<td>Facebook</td>
+				<td>179.60.195.7</td>
+				<td style="background-color: green; color: white;">OK</td>
+				<td>2023-04-17 16:01:26</td>
+			</tr>
+			
+			<tr>
+				<td>Amazon Belgium</td>
+				<td>104.68.81.55</td>
+				<td style="background-color: green; color: white;">OK</td>
+				<td>2023-04-17 16:01:26</td>
+			</tr>
+			
+			<tr>
+				<td>Facebook</td>
+				<td>179.60.195.7</td>
+				<td style="background-color: green; color: white;">OK</td>
+				<td>2023-04-17 16:01:27</td>
+			</tr>
+			
+			<tr>
+				<td>Amazon Belgium</td>
+				<td>104.68.81.55</td>
+				<td style="background-color: green; color: white;">OK</td>
+				<td>2023-04-17 16:01:27</td>
+			</tr>
+			
+			<tr>
+				<td>Facebook</td>
+				<td>179.60.195.7</td>
+				<td style="background-color: green; color: white;">OK</td>
+				<td>2023-04-17 16:01:28</td>
+			</tr>
+			
+			<tr>
+				<td>Amazon Belgium</td>
+				<td>104.68.81.55</td>
+				<td style="background-color: green; color: white;">OK</td>
+				<td>2023-04-17 16:01:28</td>
+			</tr>
+			
+		</tbody>
+	</table>
+	<button style="background-color: red; color: white;" onclick="Close()">Close</button>
+</body>
+</html>
